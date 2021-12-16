@@ -10,7 +10,7 @@ public class ProductDetailPage extends BasePage{
     By goCartLocator = new By.ByXPath("//div[normalize-space()='Sepetim']");
     By quantityProductLocator = new By.ByXPath("//div//a[@class='oq-up plus']");
     By deleteOnCartLocator = new By.ByXPath("//i[@class='fa fa-trash-o']");
-    By productDeleteLocator = By.id("Cart_ProductDelete_735209232");
+    By productDeleteLocator = new By.ByXPath("//div[@class='col-xs-12']//a[@id='Cart_ProductDelete_735388993']");
     public ProductDetailPage(WebDriver driver) {
         super(driver);
     }
@@ -39,7 +39,7 @@ public class ProductDetailPage extends BasePage{
     }
     public void deleteCart() throws InterruptedException {
         click(deleteOnCartLocator);
-        Thread.sleep(10000);
+        Thread.sleep(1000);
 
 
     }
